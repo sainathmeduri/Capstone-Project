@@ -9,8 +9,9 @@ import random
 from database.models import setup_db, Actors, Movies
 from auth.auth import AuthError, requires_auth
 
+
 def create_app(test_config=None):
-  # create and configure the app
+    # create and configure the app
     app = Flask(__name__)
     setup_db(app)
     CORS(app)
@@ -315,6 +316,7 @@ def create_app(test_config=None):
         return response
 
     return app
+
 
 app = create_app()
 

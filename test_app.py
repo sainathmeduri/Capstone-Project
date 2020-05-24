@@ -69,7 +69,9 @@ class CapstoneTestCase(unittest.TestCase):
 
     def test_b_create_actors(self):
 
-        res = self.client.post('/actors', json=self.new_actor, headers=self.authorization, )
+        res = self.client.post(
+            '/actors', json=self.new_actor,
+            headers=self.authorization, )
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 200)
@@ -77,7 +79,9 @@ class CapstoneTestCase(unittest.TestCase):
 
     def test_c_create_movies(self):
 
-        res = self.client.post('/movies', json=self.new_movie, headers=self.authorization, )
+        res = self.client.post(
+            '/movies', json=self.new_movie,
+            headers=self.authorization, )
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 200)
@@ -121,7 +125,9 @@ class CapstoneTestCase(unittest.TestCase):
 
     def test_h_update_actors(self):
 
-        res = self.client.patch('/actors/1', json=self.update_actor, headers=self.authorization, )
+        res = self.client.patch('/actors/1',
+                                json=self.update_actor,
+                                headers=self.authorization, )
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 200)
@@ -129,7 +135,9 @@ class CapstoneTestCase(unittest.TestCase):
 
     def test_i_update_movies(self):
 
-        res = self.client.patch('/movies/1', json=self.update_movie, headers=self.authorization, )
+        res = self.client.patch('/movies/1',
+                                json=self.update_movie,
+                                headers=self.authorization, )
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 200)
@@ -173,7 +181,9 @@ class CapstoneTestCase(unittest.TestCase):
 
     def test_n_404_update_actors(self):
 
-        res = self.client.patch('/actors/100', json=self.update_actor, headers=self.authorization,)
+        res = self.client.patch('/actors/100',
+                                json=self.update_actor,
+                                headers=self.authorization,)
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 404)
@@ -182,7 +192,9 @@ class CapstoneTestCase(unittest.TestCase):
 
     def test_o_404_update_movies(self):
 
-        res = self.client.patch('/movies/100', json=self.update_movie, headers=self.authorization, )
+        res = self.client.patch('/movies/100',
+                                json=self.update_movie,
+                                headers=self.authorization, )
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 404)

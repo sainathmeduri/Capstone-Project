@@ -5,15 +5,13 @@ from jose import jwt
 from urllib.request import urlopen
 
 
-AUTH0_DOMAIN = 'sainath-fsnd.auth0.com'
-ALGORITHMS = ['RS256']
-API_AUDIENCE = 'CapstoneAPI'
-
-## AuthError Exception
+# AuthError Exception
 '''
 AuthError Exception
 A standardized way to communicate auth failure modes
 '''
+
+
 class AuthError(Exception):
     def __init__(self, error, status_code):
         self.error = error

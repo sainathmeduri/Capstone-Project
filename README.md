@@ -2,6 +2,8 @@
 
 This is the final project of the Udacity Full Stack Developer Nano Degree. The goal of this project is to deploy a Flask application using Heroku and PostgreSQL and enable Role Based Authentication and roles-based access control git (RBAC) with Auth0 (third-party authentication systems).
 
+The motivation to complete this project is  to prove to myself first and the reviewers in Udacity that I have attained a good understanding of the concepts outlined in the course and to put these skills into working projects. If I am able to complete  this project, it will help me gain a lot of confidence and acts as a catalyst in pursuit of deeper knowledge in these concepts. 
+
 ## Full Stack Casting Agency
 
 The Casting Agency models a company that is responsible for creating movies and managing and assigning actors to those movies. You are an Executive Producer within the company and are creating a system to simplify and streamline your process.
